@@ -31,7 +31,7 @@ int measure_height(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (-1);
-	return (max(measure_height(tree->left), 
+	return (max(measure_height(tree->left),
 				measure_height(tree->right)) + 1);
 }
 
