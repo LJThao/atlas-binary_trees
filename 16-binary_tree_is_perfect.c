@@ -26,7 +26,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  * Return: 0, if tree is NULL
  */
 
-int perfect(const binary_tree_t *tree, size_t node1 , size_t node2)
+int perfect(const binary_tree_t *tree, size_t node1, size_t node2)
 {
 	if (!tree->left && !tree->right)
 		return (node1 == node2);
