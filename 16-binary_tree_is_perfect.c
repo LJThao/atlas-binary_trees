@@ -26,7 +26,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  * Return: 0, if tree is NULL
  */
 
-int perfect(const binary_tree_t *tree, size_t level, size_t depth)
+int perfect(const binary_tree_t *tree, size_t node1 , size_t node2)
 {
 	if (!tree->left && !tree->right)
 		return (node1 == node2);
@@ -38,7 +38,7 @@ int perfect(const binary_tree_t *tree, size_t level, size_t depth)
 }
 
 /**
- * get_ depth - measures the node in a binary tree
+ * get_depth - measures the node in a binary tree
  * @tree: pointer to the node to measure the depth
  * Return: 0, if tree is NULL
  */
