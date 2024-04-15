@@ -15,8 +15,8 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
-	left = get_tree_height(tree->left);
-	right = get_tree_height(tree->right);
+	left = measure_height(tree->left);
+	right = measure_height(tree->right);
 	balance = left - right;
 	return (balance);
 }
@@ -31,9 +31,8 @@ int measure_height(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (-1);
-	return (max(get_tree_height(tree->left),
-				get_tree_height(tree->right)) +
-			1);
+	return (max(measure_height(tree->left), 
+				measure_height(tree->right)) + 1);
 }
 
 /**
